@@ -1,0 +1,30 @@
+\documentclass[aspectratio=43]{beamer}
+%\documentclass[aspectratio=169]{beamer}
+\beamertemplatenavigationsymbolsempty
+
+\mode<presentation>
+{
+	\usetheme{Singapore}
+	\setbeamercovered{transparent}
+	\setbeamertemplate{footline}[frame number]
+}
+
+% \usepackage{flashmovie}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage[absolute,overlay]{textpos}
+
+\usebackgroundtemplate{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south west] at (current page.south west) {\includegraphics[height=0.4cm]{by.eps}};
+\end{tikzpicture}}
+
+\author{Anton Kuzmin}
+
+\institute[]
+{
+}
+\date{@DATE@}
