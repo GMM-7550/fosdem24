@@ -1,12 +1,28 @@
 \documentclass[aspectratio=43]{beamer}
-%\documentclass[aspectratio=169]{beamer}
 \beamertemplatenavigationsymbolsempty
 
 \mode<presentation>
 {
 	\usetheme{Singapore}
-	\setbeamercovered{transparent}
-	\setbeamertemplate{footline}[frame number]
+        \useoutertheme{miniframes}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{footline}[]
+        \setbeamertemplate{footline}
+                          {
+                            \leavevmode%
+                            \hbox{%
+                              \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+                                \usebeamerfont{author in head/foot}\insertauthor
+                              \end{beamercolorbox}%
+                              \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+                                \usebeamerfont{title in head/foot}\insertshorttitle
+                              \end{beamercolorbox}%
+                              \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+                                \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+                                \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+                            \end{beamercolorbox}}%
+                            \vskip0pt%
+                          }
 }
 
 % \usepackage{flashmovie}
@@ -16,15 +32,14 @@
 \usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage[absolute,overlay]{textpos}
+\usepackage{svg}
+\usepackage{xcolor}
 
 \usebackgroundtemplate{%
 \begin{tikzpicture}[remember picture,overlay]
 \node[anchor=south west] at (current page.south west) {\includegraphics[height=0.4cm]{by.eps}};
 \end{tikzpicture}}
 
-\author{Anton Kuzmin}
-
-\institute[]
-{
-}
-\date{@DATE@}
+\author[]{Anton Kuzmin}
+\institute[]{}
+\date[FOSDEM 2024]{FOSDEM'24, 3 \& 4 February 2024, Brussels}
